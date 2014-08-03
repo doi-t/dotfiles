@@ -1,0 +1,19 @@
+[user]
+	email = doi.t.npdp@gmail.com
+	name = Doi Toshiya
+[i18n]
+	commitencoding = utf-8
+	logoutputcoding = utf-8
+[core]
+	editor = vim
+[alias]
+	ci = commit
+	co = checkout
+[color]
+	ui = auto
+[pager]
+	log = nkf -u | diff-highlight | less
+	show = nkf -u | diff-highlight | less
+	diff = nkf -u | diff-highlight | less
+[credential]
+	helper = cache --timeout=3600

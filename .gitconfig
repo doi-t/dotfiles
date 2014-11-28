@@ -9,11 +9,14 @@
 [alias]
 	ci = commit
 	co = checkout
+    graph = log --graph --all --stat --pretty='format:%C(yellow)%h%Cblue%d %Creset%ar, %C(black bold)%an %Creset%s'
 [color]
 	ui = auto
 [pager]
 	log = nkf -u | diff-highlight | less
 	show = nkf -u | diff-highlight | less
 	diff = nkf -u | diff-highlight | less
+[push]
+    default = simple
 [credential]
 	helper = cache --timeout=3600

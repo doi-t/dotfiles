@@ -5,5 +5,7 @@ if [ ! -e /usr/local/bin/diff-highlight ]; then
     sudo mv diff-highlight /usr/local/bin
 fi
 
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.vimrc.local ~/.vimrc.local
+ln -s ~/dotfiles/.vimrc.bundles.local ~/.vimrc.bundles.local
+ln -s ~/dotfiles/.zshrc.local ~/.zshrc.local
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig

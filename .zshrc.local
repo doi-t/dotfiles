@@ -1,0 +1,5 @@
+#Usage: echo '[ -f ~/.zshrc.local ] && source ~/.zshrc.local' >> .zshrc.local
+
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi

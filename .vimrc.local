@@ -1,3 +1,0 @@
-au BufNewFile,BufRead *.h set noexpandtab tabstop=4 shiftwidth=4
-au BufNewFile,BufRead *.cc set noexpandtab tabstop=4 shiftwidth=4
-

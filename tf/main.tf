@@ -1,12 +1,10 @@
 locals {
   apps = [
-    "git", "gh", "pre-commit", "starship", "chezmoi",
-    "bat", "tree", "ripgrep", "exa", "fzf", "tldr",
-    "jq", "wget", "neovim",
+    "git", "gh", "pre-commit", "starship", "chezmoi", "neovim",
+    "bat", "tree", "ripgrep", "exa", "fzf", "tldr", "jq", "wget",
     "pyenv", "tfenv", "direnv",
     "awscli", "poetry",
     "go", "goreleaser",
-
     # cask
     "visual-studio-code", "iterm2",
     # "docker", https://github.com/shihanng/terraform-provider-installer/issues/42

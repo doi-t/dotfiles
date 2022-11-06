@@ -21,10 +21,11 @@ require('packer').startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'                                              -- Automatically install language servers to stdpath
   use { 'hrsh7th/nvim-cmp', requires = { 'hrsh7th/cmp-nvim-lsp' } }                    -- Autocompletion
   use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } }                -- Snippet Engine and Snippet Expansion
-  use 'mjlbach/onedark.nvim'                                                           -- Theme inspired by Atom
+  use 'navarasu/onedark.nvim'                                                           -- Theme inspired by Atom
   use 'nvim-lualine/lualine.nvim'                                                      -- Fancier statusline
   use 'lukas-reineke/indent-blankline.nvim'                                            -- Add indentation guides even on blank lines
   use 'tpope/vim-sleuth'                                                               -- Detect tabstop and shiftwidth automatically
+  use 'APZelos/blamer.nvim'                                                            -- A git blame plugin for neovim inspired by VS Code's GitLens plugin
 
   -- Fuzzy Finder (files, lsp, etc)
   use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
@@ -132,6 +133,9 @@ require('lualine').setup {
 -- Enable Comment.nvim
 require('Comment').setup()
 
+-- Enalbe `APZelos/blamer.nvim`
+vim.g.blamer_enabled = 1
+
 -- Enable `lukas-reineke/indent-blankline.nvim`
 -- See `:help indent_blankline.txt`
 require('indent_blankline').setup {
@@ -189,7 +193,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript' },
-
+  auto_install = true, -- Auto install parsers, if missing, for the current buffer
   highlight = { enable = true },
   indent = { enable = true },
   incremental_selection = {

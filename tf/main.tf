@@ -1,6 +1,6 @@
 locals {
   apps = [
-    "git", "gh", "pre-commit", "starship", "chezmoi", "neovim",
+    "git", "gh", "git-delta", "pre-commit", "starship", "chezmoi", "neovim",
     "bat", "tree", "ripgrep", "exa", "fzf", "tldr", "jq", "wget",
     "pyenv", "tfenv", "direnv",
     "awscli", "poetry",

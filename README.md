@@ -16,6 +16,8 @@ https://github.com/williamboman/mason-lspconfig.nvim
 - `:PackerInstall` for packer
 - `:TSUpdate` for nvim-treesitter
 
+Ref of Telescope: https://github.com/nvim-telescope/telescope.nvim/wiki/Showcase
+
 `init.lua` references: https://github.com/search?q=filename%3Ainit.lua&type=code
 
 # Homebrew

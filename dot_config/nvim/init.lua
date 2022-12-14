@@ -186,7 +186,6 @@ vim.keymap.set('n', '<leader>/', function()
 end, { desc = '[/] Fuzzily search in current buffer]' })
 
 vim.keymap.set('n', '<C-p>', require('telescope.builtin').find_files, { desc = 'Find files via Ctrl-p' })
-vim.keymap.set('n', '<C-f>', require('telescope.builtin').live_grep, { desc = 'Live grep via Ctrl-f' })
 vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
@@ -317,7 +316,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 require('mason').setup()
 
 -- Enable the following language servers
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'sumneko_lua' }
+local servers = { 'clangd', 'rust_analyzer', 'gopls', 'pyright', 'tsserver', 'sumneko_lua', 'terraformls', 'marksman' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
